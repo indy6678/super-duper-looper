@@ -5,18 +5,19 @@ function Nav(props) {
         sections=[],
         setCurrentSection,
         currentSection,
-    } = props
+    } = props;
 
-    useEffect(()=> {
-        document.title = currentSection;
-    }, [currentSection]);
+    useEffect(() => {document.title = currentSection;}, [currentSection]);
 
     return (
-        <header>            
+        <header className="flex-row">            
             <nav>
                 <ul className="flex-row">
+                <li className="mx-5">
+                            <span>Test</span>
+                        </li>
                   {sections.map((sections) => (
-                    <li className={`${currentSection.name === sections.name && 'navActive'}`} key={sections.name}>
+                    <li className={`mx-1 ${currentSection.name === sections.name && 'navActive'}`} key={sections.name}>
                     <span onClick={()=>{setCurrentSection(sections)}}>{(sections.name)}</span>                  
                   </li>
                   ))}

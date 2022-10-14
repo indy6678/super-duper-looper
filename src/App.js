@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 function App() {
   // jsx below, resembling html
   const [sections] = useState([
-    {name: 'About'},
+    {name: 'About', description: 'test'},
     {name: 'Portfolios'},
     {name: 'Contact'},
     {name: 'Resume'}
@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <h1>
-        <a href='/'>Eduardo Sanchez</a>
+        <a href='/'>ES</a>
       </h1>
       <Nav
         sections={sections}
@@ -25,6 +25,7 @@ function App() {
         currentSection = {currentSection}
         ></Nav>
       <main>
+        <Nav currentSection={currentSection}></Nav>
         <About></About>
       </main>
     </div>
