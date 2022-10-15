@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
 const PhotoList = ({category}) => {
     const [photos] = useState([
         {
             name: 'Me',
-            category: 'about me',
+            category: 'aboutme',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
         },
         {
@@ -12,17 +12,21 @@ const PhotoList = ({category}) => {
             category: 'portfolios',
             description: 'Search up a movie and get a description!'
         },
-
+        {
+            name:  'Password Generator',
+            category: 'portfolios',
+            description: 'Follow the prompts to generate a password!'
+        },
     ]);
 
-    const currentPhotos = photos.filter((photo) -> photo.category===category);
+    const currentPhotos = photos.filter((photo) => photo.category===category);
 
     return (
         <div>
             <div className='flex-row'>
                 {currentPhotos.map((image, i) => (
                     <img
-                        src={require(`../../assets/images/${category}/${i}.jpg`)}
+                        src={require(`../assets/images/${category}/${i}.png`)}
                         alt={image.name}
                         className='img-thumbnail mx-1'
                         key={image.name}
