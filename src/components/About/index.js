@@ -1,5 +1,5 @@
 import React from "react";
-import image from '../../logo512.png'
+import image from '../../assets/images/me.PNG'
 
 function About() {
     return (
@@ -7,7 +7,7 @@ function About() {
             <h1 id='about'>
                 About Me
             </h1>
-            <img src={image} className='' style={{ width: '50%'}} alt='cover' />
+            <img src={image} className='' style={{ width: '25%'}} alt='cover' />
         </section>
     )
 }
