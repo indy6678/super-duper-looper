@@ -7,8 +7,8 @@ import Gallery from './components/Gallery';
 function App() {
   // jsx below, resembling html
   const [sections] = useState([
-    {name: 'aboutme', description: 'All about me'},
-    {name: 'portfolios', description: 'My stuff'},
+    {name: 'About Me', description: 'All about me'},
+    {name: 'Portfolios', description: 'My stuff'},
     {name: 'Contact', description: 'Get a hold of me here!'},
     {name: 'Resume'},
   ]);
